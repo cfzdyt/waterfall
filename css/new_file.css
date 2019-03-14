@@ -1,0 +1,51 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background: #ddd;
+}
+
+a {
+	text-decoration: none;
+	color: #444;
+}
+
+a:hover,
+a:visited {
+	color: #999;
+}
+
+#wrap {
+	position: relative;
+	width: auto;
+	height: auto;
+	margin: 0 auto;
+	/*overflow: hidden;*/
+}
+
+#wrap div {
+	float: left;
+	width: 280px;
+	box-sizing: border-box;
+	height: auto;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 10px;
+	background-color: #fff;
+}
+
+#wrap div img {
+	width: 100%;
+	border-radius: 5px;
+}
+
+#wrap div a {
+	display: block;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 30px;
+	height: 30px;
+	text-align: center;
+}

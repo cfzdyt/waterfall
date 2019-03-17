@@ -19,6 +19,21 @@ function getIndex(minHeight, everyHeight) {
 		}
 	}
 };
+//设置追加盒子的样式避免重复渲染
+var getStartNumber=0;
+var setStyle=function(box,top,left,index){
+	if(getStartNumber>=index){
+		//判断这个盒子需不需要设置样式
+		return false;
+	};
+	box.css({
+		'position': 'absolute',
+		'top': top,
+		'left': left,
+	})
+	getStartNumber=index;
+	//把刚设置完的索引更新
+};
 
 //瀑布流函数
 var waterfall=function(wrap, boxes) {
@@ -61,21 +76,6 @@ var waterfall=function(wrap, boxes) {
 			//加hover样式
 		});
 	};
-};
-//设置追加盒子的样式避免重复渲染
-var getStartNumber=0;
-var setStyle=function(box,top,left,index){
-	if(getStartNumber>=index){
-		//判断这个盒子需不需要设置样式
-		return false;
-	};
-	box.css({
-		'position': 'absolute',
-		'top': top,
-		'left': left,
-	})
-	getStartNumber=index;
-	//把刚设置完的索引更新
 };
 
 

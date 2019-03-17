@@ -1,3 +1,4 @@
+//调用函数
 $(document).ready(function(event) {
 	var wrap = $('#wrap');
 	var boxes = $('#wrap').children('div');
@@ -9,7 +10,6 @@ $(document).ready(function(event) {
 	})
 	//滚动追加盒子
 });
-
 //获取索引的函数
 function getIndex(minHeight, everyHeight) {
 	for(index in everyHeight) {
@@ -36,9 +36,10 @@ var waterfall=function(wrap, boxes) {
 	for(var i = 0; i < boxes.length; i++) {
 		if(i < colsNumber) {
 			everyHeight[i] = boxes.eq(i).height() + 40;
+			
 			//加上内边距外边距  存上每列高度
 		} else {
-			var minHeight = Math.min.apply(null, everyHeight);
+			var minHeight = Math.min.apply(null, everyHeight)
 			//就是说数组 没有min这个方法，但是Math对象可以求最小值，有min这个方法，就需要使用call/apply来改变执行环境
 			var minIndex = getIndex(minHeight, everyHeight);
 			//调用函数获取最小高度的索引
@@ -80,44 +81,26 @@ var setStyle=function(box,top,left,index){
 
 //模拟json数据
 var data=[{
-	"src":"1.jpg",
-	"title":"图片一"
-},{
 	"src":"2.jpg",
-	"title":"图片二"
+	"title":"图片1"
 },{
 	"src":"3.jpg",
-	"title":"图片三"
+	"title":"图片2"
 },{
 	"src":"4.jpg",
-	"title":"图片四"
+	"title":"图片3"
 },{
 	"src":"5.jpg",
-	"title":"图片五"
+	"title":"图片4"
 },{
 	"src":"6.jpg",
-	"title":"图片六"
-},{
-	"src":"7.jpg",
-	"title":"图片七"
-},{
-	"src":"8.jpg",
-	"title":"图片八"
-},{
-	"src":"9.jpg",
-	"title":"图片九"
-},{
-	"src":"10.jpg",
-	"title":"图片十"
-},{
-	"src":"11.jpg",
-	"title":"图片十一"
+	"title":"图片5"
 },{
 	"src":"12.jpg",
-	"title":"图片十二"
+	"title":"图片6"
 },{
 	"src":"13.jpg",
-	"title":"图片十三"
+	"title":"图片7"
 }];
 //追加盒子函数
 function appendBox(wrap){
@@ -153,3 +136,4 @@ var getChect=function(wrap){
 	
 	
 }
+
